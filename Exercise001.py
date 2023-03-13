@@ -165,7 +165,7 @@ def main():
                 tree.insert('', END, values=var)
                 flag +=1
         if flag == 0:
-            showinfo(message='Request not found!\nTry another date.')
+            showinfo(message='Request not found!\nTry another date using format \nd/m/yyyy.')
         scrol_vert = ttk.Scrollbar(orient=VERTICAL, command=tree.yview)
         tree.configure(yscroll=scrol_vert.set)
         scrol_vert.place(width=5, x=970)
