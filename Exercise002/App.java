@@ -64,7 +64,8 @@ public class App extends JFrame {
         container.setLayout(new BoxLayout(container, BoxLayout.PAGE_AXIS));
         
         
-        /* Action code (i) for buttons:
+        /*
+         * OPTION code (i) for buttons:
          * 1 - Help
          * 2 - Play a draw
          * 3 - Add new toys to draw set
@@ -92,64 +93,129 @@ public class App extends JFrame {
         input5.setPreferredSize(new Dimension(50, 30));
         input6.setPreferredSize(new Dimension(50, 30));
 
-        panel1.add(Box.createRigidArea(new Dimension(24, 40)));
-        panel1.add(button1);
-        panel1.add(Box.createRigidArea(new Dimension(350, 0)));
-        panel1.add(Box.createRigidArea(new Dimension(200, 0)));
-        panel1.add(label1);
-        panel1.add(Box.createRigidArea(new Dimension(24, 15)));
+        /*
+         * Rendering of the App screen for MacOS and WinOS
+         */
+        if (System.getProperty("os.name").contains("Mac")) {
+            panel1.add(Box.createRigidArea(new Dimension(24, 40)));
+            panel1.add(button1);
+            panel1.add(Box.createRigidArea(new Dimension(340, 0)));
+            panel1.add(Box.createRigidArea(new Dimension(190, 0)));
+            panel1.add(label1);
+            panel1.add(Box.createRigidArea(new Dimension(24, 15)));
 
-        panel2.add(Box.createRigidArea(new Dimension(24, 0)));
-        panel2.add(button2);
-        panel2.add(Box.createRigidArea(new Dimension(200, 0)));
-        panel2.add(show1);
-        panel2.add(Box.createRigidArea(new Dimension(24, 0)));
+            panel2.add(Box.createRigidArea(new Dimension(24, 0)));
+            panel2.add(button2);
+            panel2.add(Box.createRigidArea(new Dimension(200, 0)));
+            panel2.add(show1);
+            panel2.add(Box.createRigidArea(new Dimension(24, 0)));
 
-        panel3.add(label9);
-        
-        panel4.add(Box.createRigidArea(new Dimension(24, 15)));
-        panel4.add(button3);
-        panel4.add(Box.createRigidArea(new Dimension(20, 15)));
-        panel4.add(label2);
-        panel4.add(Box.createGlue());
-        panel4.add(input1);
-        panel4.add(Box.createRigidArea(new Dimension(20, 15)));
-        panel4.add(label3);
-        panel4.add(Box.createGlue());
-        panel4.add(input2);
-        panel4.add(Box.createRigidArea(new Dimension(20, 15)));
-        panel4.add(label4);
-        panel4.add(Box.createGlue());
-        panel4.add(input3);
-        panel4.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel3.add(label9);
+            
+            panel4.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel4.add(button3);
+            panel4.add(Box.createRigidArea(new Dimension(20, 15)));
+            panel4.add(label2);
+            panel4.add(Box.createGlue());
+            panel4.add(input1);
+            panel4.add(Box.createRigidArea(new Dimension(20, 15)));
+            panel4.add(label3);
+            panel4.add(Box.createGlue());
+            panel4.add(input2);
+            panel4.add(Box.createRigidArea(new Dimension(20, 15)));
+            panel4.add(label4);
+            panel4.add(Box.createGlue());
+            panel4.add(input3);
+            panel4.add(Box.createRigidArea(new Dimension(24, 15)));
 
-        panel5.add(Box.createRigidArea(new Dimension(24, 15)));
-        panel5.add(button4);
-        panel5.add(Box.createRigidArea(new Dimension(30, 15)));
-        panel5.add(label5);
-        panel5.add(Box.createGlue());
-        panel5.add(input4);
-        panel5.add(Box.createRigidArea(new Dimension(30, 15)));
-        panel5.add(checkbox1);
-        panel5.add(Box.createGlue());
-        panel5.add(label6);
-        panel5.add(Box.createGlue());
-        panel5.add(input5);
-        panel5.add(Box.createRigidArea(new Dimension(30, 15)));
-        panel5.add(checkbox2);
-        panel5.add(Box.createGlue());
-        panel5.add(label7);
-        panel5.add(Box.createGlue());
-        panel5.add(input6);
-        panel5.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel5.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel5.add(button4);
+            panel5.add(Box.createRigidArea(new Dimension(35, 15)));
+            panel5.add(label5);
+            panel5.add(Box.createGlue());
+            panel5.add(input4);
+            panel5.add(Box.createRigidArea(new Dimension(30, 15)));
+            panel5.add(checkbox1);
+            panel5.add(Box.createGlue());
+            panel5.add(label6);
+            panel5.add(Box.createGlue());
+            panel5.add(input5);
+            panel5.add(Box.createRigidArea(new Dimension(30, 15)));
+            panel5.add(checkbox2);
+            panel5.add(Box.createGlue());
+            panel5.add(label7);
+            panel5.add(Box.createGlue());
+            panel5.add(input6);
+            panel5.add(Box.createRigidArea(new Dimension(24, 15)));
 
-        panel6.add(label8);
+            panel6.add(label8);
 
-        panel7.add(Box.createRigidArea(new Dimension(0, 15)));
-        panel7.add(button5);
-        panel7.add(Box.createRigidArea(new Dimension(200, 0)));
-        panel7.add(show2);
-        panel7.add(Box.createRigidArea(new Dimension(0, 50)));
+            panel7.add(Box.createRigidArea(new Dimension(0, 15)));
+            panel7.add(button5);
+            panel7.add(Box.createRigidArea(new Dimension(200, 0)));
+            panel7.add(show2);
+            panel7.add(Box.createRigidArea(new Dimension(0, 50)));
+        }
+        else if (System.getProperty("os.name").contains("Win")) {
+            panel1.add(Box.createRigidArea(new Dimension(24, 40)));
+            panel1.add(button1);
+            panel1.add(Box.createRigidArea(new Dimension(350, 0)));
+            panel1.add(Box.createRigidArea(new Dimension(200, 0)));
+            panel1.add(label1);
+            panel1.add(Box.createRigidArea(new Dimension(24, 15)));
+
+            panel2.add(Box.createRigidArea(new Dimension(24, 0)));
+            panel2.add(button2);
+            panel2.add(Box.createRigidArea(new Dimension(200, 0)));
+            panel2.add(show1);
+            panel2.add(Box.createRigidArea(new Dimension(24, 0)));
+
+            panel3.add(label9);
+            
+            panel4.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel4.add(button3);
+            panel4.add(Box.createRigidArea(new Dimension(40, 15)));
+            panel4.add(label2);
+            panel4.add(Box.createGlue());
+            panel4.add(input1);
+            panel4.add(Box.createRigidArea(new Dimension(20, 15)));
+            panel4.add(label3);
+            panel4.add(Box.createGlue());
+            panel4.add(input2);
+            panel4.add(Box.createRigidArea(new Dimension(20, 15)));
+            panel4.add(label4);
+            panel4.add(Box.createGlue());
+            panel4.add(input3);
+            panel4.add(Box.createRigidArea(new Dimension(24, 15)));
+
+            panel5.add(Box.createRigidArea(new Dimension(24, 15)));
+            panel5.add(button4);
+            panel5.add(Box.createRigidArea(new Dimension(70, 15)));
+            panel5.add(label5);
+            panel5.add(Box.createGlue());
+            panel5.add(input4);
+            panel5.add(Box.createRigidArea(new Dimension(30, 15)));
+            panel5.add(checkbox1);
+            panel5.add(Box.createGlue());
+            panel5.add(label6);
+            panel5.add(Box.createGlue());
+            panel5.add(input5);
+            panel5.add(Box.createRigidArea(new Dimension(30, 15)));
+            panel5.add(checkbox2);
+            panel5.add(Box.createGlue());
+            panel5.add(label7);
+            panel5.add(Box.createGlue());
+            panel5.add(input6);
+            panel5.add(Box.createRigidArea(new Dimension(24, 15)));
+
+            panel6.add(label8);
+
+            panel7.add(Box.createRigidArea(new Dimension(0, 15)));
+            panel7.add(button5);
+            panel7.add(Box.createRigidArea(new Dimension(200, 0)));
+            panel7.add(show2);
+            panel7.add(Box.createRigidArea(new Dimension(0, 50)));
+        }
 
         container.add(panel1);
         container.add(panel2);
